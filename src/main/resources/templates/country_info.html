@@ -28,9 +28,9 @@
     <div th:text="${country.id}"></div>
   </div>
   <nav class="nav">
-    <a class="nav-link active" href="/index.html">Back To Homepage</a>
-    <a class="nav-link" th:href="@{'/countries'}">Country List</a>
-    <a class="nav-link" th:href="@{'/new_country'}">Add New Country</a>
+    <a class="nav-link active" th:href="@{/index}">Back To Homepage</a>
+    <a class="nav-link" th:href="@{/countries}">Country List</a>
+    <a class="nav-link" th:href="@{/new_country}">Add New Country</a>
   </nav>
 </main>
 <footer></footer>

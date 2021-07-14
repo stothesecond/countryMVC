@@ -14,7 +14,7 @@ public class AppController {
     return "index";
   }
 
-  @GetMapping
+  @GetMapping("/about")
   public String about() {
     return "about";
   }

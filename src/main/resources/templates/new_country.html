@@ -10,7 +10,7 @@
 <div class="container">
   <header><h1>Add A New Country</h1></header>
   <main>
-    <form th:action="@{'/new_country'}" method="post" th:object="${country}">
+    <form th:action="@{/new_country}" method="post" th:object="${country}">
 
       <p class="error-message"
          th:if="${#fields.hasGlobalErrors()}"
@@ -63,8 +63,8 @@
       <input type="submit" value="Submit">
     </form>
     <nav class="nav">
-      <a class="nav-link active" href="/index.html">Back To Homepage</a>
-      <a class="nav-link" th:href="@{'/countries'}">Country List</a>
+      <a class="nav-link active" th:href="@{/index}">Back To Homepage</a>
+      <a class="nav-link" th:href="@{/countries}">Country List</a>
     </nav>
   </main>
 </div>
