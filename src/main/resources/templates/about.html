@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>About</title>
-  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
 </head>
 <body>
 <div class="container">
@@ -16,10 +16,10 @@
       This is a tool to save, edit, view, and delete data on various countries.
     </p>
     <nav class="nav">
-      <a class="nav-link active" href="/index.html">Back To Homepage</a>
+      <a class="nav-link active" th:href="@{/index.html}">Back To Homepage</a>
     </nav>
   </main>
 </div>
-<script src="js/bootstrap.bundle.min.js"></script>
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
 </body>
 </html>
