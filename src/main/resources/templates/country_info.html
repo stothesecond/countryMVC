@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Title</title>
+  <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+</head>
+<body>
+<header>
+  <h1>Data On <span th:text="${country.name}"></span></h1>
+</header>
+<main>
+  <div>
+    <div>Name</div>
+    <div th:text="${country.name}"></div>
+
+    <div>Population</div>
+    <div th:text="${country.population}"></div>
+
+    <div>Capital</div>
+    <div th:text="${country.capital}"></div>
+
+    <div>Year Founded</div>
+    <div th:text="${country.yearFounded}"></div>
+
+    <div>Country Id</div>
+    <div th:text="${country.id}"></div>
+  </div>
+  <nav class="nav">
+    <a class="nav-link active" href="/index.html">Back To Homepage</a>
+    <a class="nav-link" th:href="@{'/countries'}">Country List</a>
+    <a class="nav-link" th:href="@{'/new_country'}">Add New Country</a>
+  </nav>
+</main>
+<footer></footer>
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+</body>
+</html>

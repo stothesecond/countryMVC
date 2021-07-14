@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>New Country</title>
+  <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+</head>
+<body>
+<div class="container">
+  <header><h1>Add A New Country</h1></header>
+  <main>
+    <form th:action="@{'/new_country'}" method="post" th:object="${country}">
+
+      <p class="error-message"
+         th:if="${#fields.hasGlobalErrors()}"
+         th:each="error : ${#fields.errors('global')}"
+         th:text="${error}"
+      >
+        Validation error
+      </p>
+
+      <div class="mb-3"
+           th:classappend="${#fields.hasErrors('name')}? 'has-error':''"
+      >
+        <label for="form_country_name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="form_country_name" th:field="*{name}">
+        <p class="error-message"
+           th:each="error: ${#fields.errors('name')}"
+           th:text="${error}">Validation error</p>
+      </div>
+
+      <div class="mb-3"
+           th:classappend="${#fields.hasErrors('population')}? 'has-error':''"
+      >
+        <label for="form_country_population" class="form-label">Population</label>
+        <input type="number" class="form-control" id="form_country_population" th:field="*{population}">
+        <p class="error-message"
+           th:each="error: ${#fields.errors('population')}"
+           th:text="${error}">Validation error</p>
+      </div>
+
+      <div class="mb-3"
+           th:classappend="${#fields.hasErrors('capital')}? 'has-error':''"
+      >
+        <label for="form_country_capital_name" class="form-label">Capital</label>
+        <input type="text" class="form-control" id="form_country_capital_name" th:field="*{capital}">
+        <p class="error-message"
+           th:each="error: ${#fields.errors('capital')}"
+           th:text="${error}">Validation error</p>
+      </div>
+
+      <div class="mb-3"
+           th:classappend="${#fields.hasErrors('yearFounded')}? 'has-error':''"
+      >
+        <label for="form_country_year_founded" class="form-label">Year Founded</label>
+        <input type="number" class="form-control" id="form_country_year_founded" th:field="*{yearFounded}">
+        <p class="error-message"
+           th:each="error: ${#fields.errors('yearFounded')}"
+           th:text="${error}">Validation error</p>
+      </div>
+
+      <input type="submit" value="Submit">
+    </form>
+    <nav class="nav">
+      <a class="nav-link active" href="/index.html">Back To Homepage</a>
+      <a class="nav-link" th:href="@{'/countries'}">Country List</a>
+    </nav>
+  </main>
+</div>
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+</body>
+</html>
