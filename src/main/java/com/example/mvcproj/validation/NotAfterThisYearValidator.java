@@ -1,7 +1,10 @@
-package com.example.mvcproj.validation.annotations;
+package com.example.mvcproj.validation;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
+
+import com.example.mvcproj.validation.annotations.NotAfterThisYear;
+
 import java.util.Calendar;
 
 public class NotAfterThisYearValidator implements ConstraintValidator<NotAfterThisYear, Integer> {

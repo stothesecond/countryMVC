@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>No Country Found</title>
-  <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
-</head>
-<body>
-<header><h1>No Country Found!</h1></header>
-<main>
-  <h2>Error 404</h2>
-  <p>
-    No country was found with id: <span th:text="${id}"></span>.
-    Please go back and pick a valid country.
-  </p>
-  <nav class="nav">
-    <a class="nav-link active" th:href="@{/}">Back To Homepage</a>
-    <a class="nav-link" th:href="@{/countries}">Country List</a>
-  </nav>
-</main>
-<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>No Country Found</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
+  </head>
+  <body>
+    <header><h1>No Country Found!</h1></header>
+    <main>
+      <h2>Error 404</h2>
+      <p>
+        No country was found with id: <span th:text="${id}"></span>. Please go
+        back and pick a valid country.
+      </p>
+      <nav class="nav">
+        <a class="nav-link active" th:href="@{/logout}">Log Out</a>
+        <a class="nav-link" th:href="@{/countries}">Country List</a>
+      </nav>
+    </main>
+    <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+  </body>
 </html>

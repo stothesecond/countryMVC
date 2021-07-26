@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Country MVC Website</title>
-  <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
-</head>
-<body>
-<div class="container">
-  <header>
-    <nav class="nav">
-      <a class="nav-link active" th:href="@{/countries}">Country List</a>
-      <a class="nav-link" th:href="@{/about}">About</a>
-    </nav>
-    <h1>Steven's Country MVC Website!</h1>
-    <button type="button" class="btn btn-primary">Log in</button>
-    <button type="button" class="btn btn-outline-secondary">About</button>
-  </header>
-  <main>
-    <h2>MVC Project!</h2>
-    <p>This Project employs Spring MVC and Thymeleaf!</p>
-  </main>
-</div>
-<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Country MVC Website</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <nav class="nav">
+          <a class="nav-link active" th:href="@{/countries}">Country List</a>
+          <a class="nav-link" th:href="@{/about}">About</a>
+        </nav>
+        <h1>Steven's Country MVC Website!</h1>
+        <a type="button" class="btn btn-primary" th:href="@{/login}">Log in</a>
+        <a type="button" class="btn btn-outline-secondary" th:href="@{/about}">
+          About
+        </a>
+      </header>
+      <main>
+        <h2>MVC Project!</h2>
+        <p>This Project employs Spring MVC and Thymeleaf!</p>
+      </main>
+    </div>
+    <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+  </body>
 </html>

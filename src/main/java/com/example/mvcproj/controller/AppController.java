@@ -20,7 +20,7 @@ public class AppController {
   }
 
   @PostMapping("/delete/{id}")
-  public String deleteCountry(@PathVariable(name = "id") int countryId) {
+  public String deleteCountry(@PathVariable("id") int countryId) {
     countryService.deleteById(countryId);
     return "redirect:/countries";
   }
