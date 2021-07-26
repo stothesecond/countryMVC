@@ -1,7 +1,5 @@
 package com.example.mvcproj.controller;
 
-import java.util.Optional;
-
 import javax.validation.Valid;
 
 import com.example.mvcproj.model.User;
